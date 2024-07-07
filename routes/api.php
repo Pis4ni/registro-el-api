@@ -21,5 +21,5 @@ Route::middleware('auth')->group(function () {
     Route::put('/students/{id}', [StudentController::class, 'update']);
     Route::delete('/students/{id}', [StudentController::class, 'destroy']);
     // by institute
-    Route::get('/institutes/{instituteId}/students', [StudentController::class, 'studentsByInstitute']);
+    Route::get('/institute/{instituteId}/students', [StudentController::class, 'studentsByInstitute']);
 });
