@@ -48,9 +48,11 @@ class StudentsSeeder extends Seeder
         // Generazione di 50 studenti con Faker
         for ($i = 0; $i < 50; $i++) {
             $studentData = [
-                'name' => $faker->name,
+                'name' => $faker->firstName,
                 'surname' => $faker->lastName,
                 'date_of_birth' => $faker->dateTimeBetween('-28 years', '-20 year'),
+                'class' => $faker->numberBetween(1, 5),
+                'section' => $faker->randomElement(['a', 'b', 'c', 'd', 'e']),
                 'institute_id' => $faker->randomElement($instituteIds)
             ];
 

@@ -21,7 +21,9 @@ return new class extends Migration
             $table->date('date_of_birth'); // Data di nascita
             $table->string('class'); // Classe
             $table->string('section'); // Sezione
-            $table->foreignId('institute_id')->constrained('institutes'); // Foreign key
+
+            $table->string('institute_id'); // Definisce la colonna come stringa
+            $table->foreign('institute_id')->references('id')->on('institutes'); // Definizione della chiave esterna
 
             $table->timestamps();
             $table->softDeletes(); // Soft delete functionality

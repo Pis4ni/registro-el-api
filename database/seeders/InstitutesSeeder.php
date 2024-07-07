@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Institute;
 
-class InstituteSeeder extends Seeder
+class InstitutesSeeder extends Seeder
 {
  /**
      * Esegue il seeding del database con i dati degli istituti.
