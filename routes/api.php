@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\StudentController;
+use App\Http\Controllers\API\InstituteController;
 
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
@@ -22,4 +23,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/students/{id}', [StudentController::class, 'destroy']);
     // by institute
     Route::get('/institute/{instituteId}/students', [StudentController::class, 'studentsByInstitute']);
+    // institute
+    Route::get('/institute/', [InstituteController::class, 'index']);
+    Route::get('/institute/{institute_id}', [InstituteController::class, 'show']);
+
 });
