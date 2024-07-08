@@ -14,9 +14,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('institutes', function (Blueprint $table) {
-            $table->string('id')->primary(); // Primary key (alphanumeric code)
-            $table->string('name'); // Nome istituto
 
+            $table->string('id')->primary();
+            $table->string('name'); // Nome istituto
+            $table->string('code');
             $table->timestamps();
         });
     }

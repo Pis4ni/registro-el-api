@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name'); // Nome
             $table->string('surname'); // Cognome
             $table->date('date_of_birth'); // Data di nascita
-            $table->string('class'); // Classe
+            $table->integer('class'); // Classe
             $table->string('section'); // Sezione
 
             $table->string('institute_id'); // Definisce la colonna come stringa

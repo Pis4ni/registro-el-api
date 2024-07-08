@@ -32,7 +32,7 @@ class StudentController extends Controller
             'name' => 'required|string',
             'surname' => 'required|string',
             'date_of_birth' => 'required|date',
-            'class' => 'required|string',
+            'class' => 'required|integer',
             'section' => 'required|string',
             'institute_id' => 'required|exists:institutes,id', // Assuming institutes table exists
         ]);
@@ -70,7 +70,7 @@ class StudentController extends Controller
             'name' => 'string',
             'surname' => 'string',
             'date_of_birth' => 'date',
-            'class' => 'string',
+            'class' => 'integer',
             'section' => 'string',
             'institute_id' => 'exists:institutes,id', // Assuming institutes table exists
         ]);

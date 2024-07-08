@@ -4,21 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Student; // Importa il modello Studente
+use App\Models\Student; 
 
 class Institute extends Model
 {
     use HasFactory;
-
-    // Proprietà del modello
     protected $fillable = [
-        'name', // Nome istituto
-        'id' // Codice identificativo univoco (o ID)
+        'name',
+        'id',
+        'code',
     ];
-
-    // Relazione con il modello Studente
     public function students()
     {
-        return $this->hasMany(Student::class); // Relazione uno-a-molti
+        return $this->hasMany(Student::class); 
     }
 }

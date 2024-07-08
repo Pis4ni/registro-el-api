@@ -13,11 +13,10 @@ class InstituteController extends Controller
      */
     public function index()
     {
-        $institutes = Institute::all();
+        $institutes = Institute::select('id', 'name', 'code')->get();
 
         return response()->json(['institutes' => $institutes], 200);
     }
-
     /**
      * Display the specified resource.
      */
